@@ -1,0 +1,48 @@
+<div class="field{{ isGrouped ? ' is-grouped' : '' }} {{class}}">
+  {{#if label}}
+    <label class="label" for="{{name}}">{{label}}</label>
+  {{/if}}
+  <div class="control{{ iconClasses }}{{controlClass ? ' ' + controlClass : ''}}">
+    <slot></slot>
+  </div>
+  {{#if help}}
+    <p class="help{{ helpType ? ' is-' + helpType : '' }}">{{help}}</p>
+  {{/if}}
+</div>
+
+<script>
+export default {
+  data() {
+    return {
+      label: '',
+      name: '',
+      help: '',
+      class: '',
+      controlClass: '',
+      helpType: 'danger',
+      hasIcon: false,
+      hasIconLeft: false,
+      hasIconRight: false,
+    };
+  },
+  computed: {
+    iconClasses: (hasIcon, hasIconLeft, hasIconRight) => {
+      const iconClasses = {
+        'has-icon': hasIcon,
+        'has-icons-left': hasIconLeft,
+        'has-icons-right': hasIconRight,
+      };
+      let clazz = '';
+      Object.keys(iconClasses).forEach((key) => {
+        if (iconClasses[key]) {
+          if (clazz === '') {
+            clazz += ' ';
+          }
+          clazz += key;
+        }
+      });
+      return clazz;
+    },
+  },
+};
+</script>

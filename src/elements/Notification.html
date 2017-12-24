@@ -1,0 +1,16 @@
+<div class="notification{{ type ? ' is-' + type : '' }}">
+  <slot>
+    {{contents}}
+  </slot>
+</div>
+
+<script>
+export default {
+  data() {
+    return {
+      type: '',
+      contents: '',
+    };
+  },
+};
+</script>

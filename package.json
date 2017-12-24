@@ -1,0 +1,55 @@
+{
+  "name": "svelte-bulma",
+  "version": "0.0.0-development",
+  "description": "Bulma Components for Svelte",
+  "main": "dist/svelte-bulma.js",
+  "repository": "git@github.com:RobBrazier/svelte-bulma.git",
+  "author": "Rob Brazier",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint ./{example,src}/**/*.{html,js}",
+    "test": "npm run lint",
+    "commit": "commit",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^5.2.0",
+    "@commitlint/config-conventional": "^5.1.3",
+    "@commitlint/prompt-cli": "^5.2.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
+    "rollup": "^0.51.5",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-buble": "^0.18.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-svelte": "^3.1.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "semantic-release": "^8.2.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "verifyConditions": {
+      "path": "./build/verify-conditions.js"
+    }
+  },
+  "peerDependencies": {
+    "bulma": "^0.6.1"
+  },
+  "dependencies": {
+    "svelte-awesome": "^1.2.0"
+  }
+}
