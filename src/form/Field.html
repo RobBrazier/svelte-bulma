@@ -11,38 +11,42 @@
 </div>
 
 <script>
-export default {
-  data() {
-    return {
-      label: '',
-      name: '',
-      help: '',
-      class: '',
-      controlClass: '',
-      helpType: 'danger',
-      hasIcon: false,
-      hasIconLeft: false,
-      hasIconRight: false,
-    };
-  },
-  computed: {
-    iconClasses: (hasIcon, hasIconLeft, hasIconRight) => {
-      const iconClasses = {
-        'has-icon': hasIcon,
-        'has-icons-left': hasIconLeft,
-        'has-icons-right': hasIconRight,
+  import { addObservers } from '../modifiers';
+  export default {
+    data() {
+      return {
+        label: '',
+        name: '',
+        help: '',
+        class: '',
+        controlClass: '',
+        helpType: 'danger',
+        hasIcon: false,
+        hasIconLeft: false,
+        hasIconRight: false,
       };
-      let clazz = '';
-      Object.keys(iconClasses).forEach((key) => {
-        if (iconClasses[key]) {
-          if (clazz === '') {
-            clazz += ' ';
-          }
-          clazz += key;
-        }
-      });
-      return clazz;
     },
-  },
-};
+    computed: {
+      iconClasses: (hasIcon, hasIconLeft, hasIconRight) => {
+        const iconClasses = {
+          'has-icon': hasIcon,
+          'has-icons-left': hasIconLeft,
+          'has-icons-right': hasIconRight,
+        };
+        let clazz = '';
+        Object.keys(iconClasses).forEach((key) => {
+          if (iconClasses[key]) {
+            if (clazz === '') {
+              clazz += ' ';
+            }
+            clazz += key;
+          }
+        });
+        return clazz;
+      },
+    },
+    oncreate() {
+      addObservers(this);
+    }
+  };
 </script>

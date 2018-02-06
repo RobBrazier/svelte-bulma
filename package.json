@@ -34,7 +34,8 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-svelte": "^3.1.0",
     "rollup-plugin-uglify": "^2.0.1",
-    "semantic-release": "^8.2.0"
+    "semantic-release": "^8.2.0",
+    "svelte": "^1.54.1"
   },
   "commitlint": {
     "extends": [
@@ -48,8 +49,5 @@
   },
   "peerDependencies": {
     "bulma": "^0.6.1"
-  },
-  "dependencies": {
-    "svelte-awesome": "^1.2.0"
   }
 }
