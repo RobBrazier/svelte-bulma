@@ -31,7 +31,7 @@
     "rollup-plugin-buble": "^0.18.0",
     "rollup-plugin-commonjs": "^8.3.0",
     "rollup-plugin-node-resolve": "^3.0.3",
-    "rollup-plugin-svelte": "^3.3.0",
+    "rollup-plugin-svelte": "^4.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "semantic-release": "^12.4.1",
     "svelte": "^1.55.0"
