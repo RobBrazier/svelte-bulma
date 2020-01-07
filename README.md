@@ -1,6 +1,9 @@
 # svelte-bulma
 Bulma Components for Svelte [WIP]
 
+> Deprecated and Archived as only 2 components were created
+> Please see [svelma](https://github.com/c0bra/svelma) for a more Feature Complete implementation of Svelte Bulma components
+
 ## Components
 - [ ] Breadcrumbs
   - [ ] Breadcrumb
